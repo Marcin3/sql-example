@@ -1,0 +1,39 @@
+-------------------------------------------------------
+-- Script to fill tabel in PostgreSQL.
+-------------------------------------------------------
+
+-----------------------------
+-- Fill table Flight
+-----------------------------
+INSERT INTO public.Flight("fl_id", "fl_flight_no", "fl_dep", "fl_arr")
+VALUES ('1', '001', 'KRK', 'WAW');
+INSERT INTO public.Flight("fl_id", "fl_flight_no", "fl_dep", "fl_arr")
+VALUES ('2', '002', 'RZE', 'GDN');
+INSERT INTO public.Flight("fl_id", "fl_flight_no", "fl_dep", "fl_arr")
+VALUES ('3', '003', 'GDN', 'IST');
+INSERT INTO public.Flight("fl_id", "fl_flight_no", "fl_dep", "fl_arr")
+VALUES ('4', '973', 'KBP', 'DME');
+
+------------------------------
+-- Fill table FlightCrew
+------------------------------
+INSERT INTO public.FlightCrew("crew_id", "fl_id", "crew_rank")
+VALUES ('1', '1', 'FO');
+INSERT INTO public.FlightCrew("crew_id", "fl_id", "crew_rank")
+VALUES ('2', '4', 'CP');
+INSERT INTO public.FlightCrew("crew_id", "fl_id", "crew_rank")
+VALUES ('3', '3', 'CP');
+INSERT INTO public.FlightCrew("crew_id", "fl_id", "crew_rank")
+VALUES ('4', '2', 'FO');
+INSERT INTO public.FlightCrew("crew_id", "fl_id", "crew_rank")
+VALUES ('5', '3', 'FO');
+INSERT INTO public.FlightCrew("crew_id", "fl_id", "crew_rank")
+VALUES ('6', '1', 'CP');
+INSERT INTO public.FlightCrew("crew_id", "fl_id", "crew_rank")
+VALUES ('7', '2', 'FE');
+INSERT INTO public.FlightCrew("crew_id", "fl_id", "crew_rank")
+VALUES ('8', '1', 'FE');
+INSERT INTO public.FlightCrew("crew_id", "fl_id", "crew_rank")
+VALUES ('9', '2', 'SO');
+INSERT INTO public.FlightCrew("crew_id", "fl_id", "crew_rank")
+VALUES ('10', '1', 'SO');
