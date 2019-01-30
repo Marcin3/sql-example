@@ -1,0 +1,9 @@
+-- Returns the total sum of crew_rank for fl_flight_no
+-- crew_rank can not be CP and sum must be at least 2
+SELECT  Flight."fl_flight_no", COUNT(FlightCrew."crew_rank") AS number_of_ranks
+FROM public.FlightCrew INNER JOIN public.Flight
+ON Flight."fl_id" = FlightCrew."fl_id"
+WHERE fli."crew_rank" NOT IN ('CP')
+GROUP BY Flight."fl_flight_no"
+HAVING COUNT(FlightCrew."crew_id")>2
+ORDER BY "fl_flight_no";
