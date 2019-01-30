@@ -1,0 +1,35 @@
+-----------------------------------------------------
+-- Script for create table in PostgreSQL database.
+-----------------------------------------------------
+
+---------------------------
+-- Create table Flight
+---------------------------
+CREATE TABLE Flight
+(
+  fl_id         char(10)  NOT NULL ,
+  fl_flight_no  char(50)  NOT NULL ,
+  fl_dep        char(5)  NOT NULL ,
+  fl_arr        char(5)  NOT NULL
+);
+
+----------------------------
+-- Create tabel FlightCrew
+----------------------------
+CREATE TABLE FlightCrew
+(
+  crew_id      char(10) NOT NULL ,
+  fl_id        char(50) NOT NULL ,
+  crew_rank    char(4)  NOT NULL 
+);
+
+-------------------------------
+-- Definition of primary key
+-------------------------------
+ALTER TABLE Flight ADD PRIMARY KEY (fl_id);
+ALTER TABLE FlightCrew ADD PRIMARY KEY (crew_id);
+
+-----------------------------
+-- Definition of foreign key
+-----------------------------
+ALTER TABLE FlightCrew ADD CONSTRAINT FK_OrIt_Or FOREIGN KEY (fl_id) REFERENCES Flight (fl_id);
